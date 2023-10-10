@@ -1,4 +1,4 @@
-# Astro Starter Kit: Basics
+# AONI teg landing page 
 
 ```sh
 npm create astro@latest -- --template basics
