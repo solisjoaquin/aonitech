@@ -1,0 +1,114 @@
+---
+interface Props {
+  lab: {
+    name: string;
+    descripcion: string;
+    urlDemo: string;
+    urlRepo: string;
+    imgUrl: string;
+  };
+}
+const { lab } = Astro.props;
+---
+
+<div class="container-lab">
+  <div class="titulos-lab">
+    <h1>{lab.name}</h1>
+    <h2>{lab.descripcion}</h2>
+    <div class="btn-lab">
+      <a class="btn btn-azul-lab" href={lab.urlDemo}>Ver demo</a>
+      <a class="btn btn-gris-lab" href={lab.urlRepo}>Repo</a>
+    </div>
+  </div>
+  <div class="caja-llama">
+    <img src={lab.imgUrl} alt="" />
+  </div>
+</div>
+
+<style>
+  .container-lab {
+    background-color: var(--color-secundario);
+    font-family: var(--fuente-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+    border-radius: 20px;
+    background: #e0e0e0;
+    box-shadow:
+      20px 20px 60px #bebebe,
+      -20px -20px 60px #ffffff;
+  }
+  .container-lab:hover {
+    transform: scale(1.01);
+  }
+  .caja-llama {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    margin: 0 auto;
+  }
+  .caja-llama img {
+    height: 192px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .titulos-lab h1 {
+    font-size: 36px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .titulos-lab h2 {
+    font-size: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  .btn-lab {
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    gap: 20px;
+  }
+  .btn {
+    font-weight: 300;
+    font-size: 16px;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  .btn-azul-lab {
+    background-color: var(--color-primario);
+  }
+  .btn-gris-lab {
+    background-color: var(--color-terciario);
+  }
+
+  @media (min-width: 700px) {
+    .container-lab {
+      width: 1165px;
+      height: 416px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .caja-llama img {
+      width: 533px;
+      height: 376px;
+    }
+    .titulos-lab {
+      padding-bottom: 180px;
+      padding-left: 30px;
+    }
+
+    .titulos-lab h1 {
+      padding-top: 50px;
+    }
+
+    .btn-lab {
+      padding-top: 40px;
+    }
+  }
+</style>
