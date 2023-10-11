@@ -6,7 +6,10 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <div class="contenedor">
       <h1>Your place to build things</h1>
-      <a href="/lab" class="boton-main">Discover</a>
+      <div>
+        <a href="/lab" class="buttom-main">Discover</a>
+      </div>
+      
     </div>
   </main>
 </Layout>
@@ -17,30 +20,47 @@ import Layout from "../layouts/Layout.astro";
     padding: 0;
   }
   main {
-    height: 70vh;
+    height: 100vh;
   }
   .contenedor {
     width: 100%;
-    margin: auto;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    margin: 100px 0px;
     padding-top: 20px;
-  }
-  .contenedor a {
-    background-color: var(--color-primario);
-    text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-
-    font-family: var(--fuente-principal);
-    font-weight: 600;
-    border-radius: 4px;
   }
   .contenedor h1 {
     font-family: var(--fuente-principal);
     text-align: center;
-    margin: 100px 0px;
-    font-size: 60px;
+    padding-bottom: 60px;
+    padding-top: 180px;
+    font-size: 45px;
   }
+  .contenedor a {
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    border-radius: 4px;
+  }
+  .buttom-main {
+    background-color: var(--color-primario);
+    color: white;
+  }
+
+  .buttom-main:hover {
+    background-color: var(--color-terciario);
+  }
+
+  @media (min-width: 700px) {
+    .contenedor h1 {
+      font-size: 70px;
+    }
+    .contenedor a {
+    padding: 15px 30px;
+    font-size: 20px;}
+  }
+  
+  
 </style>
