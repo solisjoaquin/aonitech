@@ -1,9 +1,84 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+
+import CardLab from "../components/CardLab.astro";
+
+const labs = [
+  {
+    id: 1,
+    name: "Nombre del articulo 12",
+    descripcion: "lorem10",
+    imgUrl: "/llama.png",
+    urlDemo:
+      "https://www.youtube.com/watch?v=6yJYn6n4NWo&list=RD2qf9UtU6ggU&index=17",
+    urlRepo: "",
+  },
+  {
+    id: 2,
+    name: "Nombre del articulo 24",
+    descripcion: "",
+    imgUrl: "/llamita.jpeg",
+    urlDemo: "",
+    urlRepo: "",
+  },
+  {
+    id: 3,
+    name: "Nombre del articulo 35",
+    descripcion: "",
+    imgUrl: "/llamita.jpeg",
+    urlDemo: "",
+    urlRepo: "",
+  },
+  {
+    id: 4,
+    name: "Nombre del articulo 35",
+    descripcion: "",
+    imgUrl: "/llamita.jpeg",
+    urlDemo: "",
+    urlRepo: "",
+  },
+];
 ---
 
 <Layout title="Lab">
-	<main>
-		Lab
-	</main>
+  <main>
+    <div>
+      <h1>Lab</h1>
+    </div>
+    <div class="card-lab">
+      {labs.map((lab) => <CardLab lab={lab} />)}
+      <!-- <CardLab />
+      <CardLab />
+      <CardLab />
+      <CardLab /> -->
+    </div>
+  </main>
 </Layout>
+
+<style>
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-lab {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-family: var(--fuente-principal);
+    padding-left: 20px;
+
+    padding-top: 20px;
+  }
+  @media (min-width: 700px) {
+    h1 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-left: 0;
+    }
+  }
+</style>
