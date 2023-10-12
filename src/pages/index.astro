@@ -15,10 +15,6 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
   main {
     height: 100vh;
   }
@@ -26,18 +22,21 @@ import Layout from "../layouts/Layout.astro";
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    
   }
   .contenedor h1 {
     font-family: var(--fuente-principal);
     padding-bottom: 40px;
     padding-top: 40px;
     font-size: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .button-container {
     display: flex;
     justify-content: flex-start;
     padding-bottom: 60px;
+    padding: 10px;
   }
   .button-container a {
     text-decoration: none;
