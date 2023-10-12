@@ -4,6 +4,8 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import Foooter from "../components/Foooter.astro";
 ---
 
 <!doctype html>
@@ -37,9 +39,7 @@ const { title } = Astro.props;
 
     <slot />
 
-    <footer>
-      <h2>Soy el Footer</h2>
-    </footer>
+    <Foooter />
   </body>
 </html>
 <style is:global>
@@ -85,13 +85,5 @@ const { title } = Astro.props;
     font-family: var(--fuente-principal);
     font-weight: 600;
   }
-  footer {
-    background-color: #353535;
-    color: white;
-    justify-content: center;
-    height: 16vh;
-    display: flex;
-    align-items: center;
-    font-family: var(--fuente-principal);
-  }
+  
 </style>
