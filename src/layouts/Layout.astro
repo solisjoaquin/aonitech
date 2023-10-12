@@ -5,7 +5,7 @@ interface Props {
 
 const { title } = Astro.props;
 
-import Foooter from "../components/Foooter.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
@@ -39,7 +39,7 @@ import Foooter from "../components/Foooter.astro";
 
     <slot />
 
-    <Foooter />
+    <Footer />
   </body>
 </html>
 <style is:global>
@@ -85,5 +85,4 @@ import Foooter from "../components/Foooter.astro";
     font-family: var(--fuente-principal);
     font-weight: 600;
   }
-  
 </style>
