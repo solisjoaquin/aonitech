@@ -20,7 +20,7 @@ const { lab } = Astro.props;
       <a class="btn btn-gris-lab" href={lab.urlRepo}>Repo</a>
     </div>
   </div>
-  <div class="caja-llama">
+  <div class="box-img">
     <img src={lab.imgUrl} alt="" />
   </div>
 </div>
@@ -29,12 +29,12 @@ const { lab } = Astro.props;
   .container-lab {
     background-color: var(--color-secundario);
     font-family: var(--fuente-principal);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
-    position: relative;
     border-radius: 20px;
     background: #e0e0e0;
     box-shadow:
@@ -44,30 +44,27 @@ const { lab } = Astro.props;
   .container-lab:hover {
     transform: scale(1.01);
   }
-  .caja-llama {
+  .box-img {
     padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    margin: 0 auto;
-  }
-  .caja-llama img {
-    height: 192px;
     width: 100%;
+    
+  }
+  .box-img img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
     border-radius: 5px;
   }
   .titulos-lab h1 {
     font-size: 36px;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding-bottom: 10px;
   }
   .titulos-lab h2 {
     font-size: 20px;
-    padding-top: 20px;
-    padding-left: 20px;
+    padding-bottom: 15px;
   }
   .btn-lab {
-    padding-top: 20px;
-    padding-left: 20px;
+
     display: flex;
     gap: 20px;
   }
@@ -94,8 +91,11 @@ const { lab } = Astro.props;
       flex-direction: row;
     }
 
-    .caja-llama img {
-      width: 533px;
+    .box-img {
+      width: 50%;
+    }
+
+    .box-img img {
       height: 376px;
     }
     .titulos-lab {
@@ -103,12 +103,5 @@ const { lab } = Astro.props;
       padding-left: 30px;
     }
 
-    .titulos-lab h1 {
-      padding-top: 50px;
-    }
-
-    .btn-lab {
-      padding-top: 40px;
-    }
   }
 </style>
