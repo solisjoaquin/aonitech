@@ -6,10 +6,19 @@
       <p>Descripcion del post</p>
       <div class="btn-container">
         <div class="btn-blog">
+          <div>
           <a
+            class="btn"
             href="https://www.youtube.com/watch?v=YSV0bsXb74Q&list=RDGMEMFDHdtbQF5jLxlUZMleBN_wVMy8rBC6GCUjg&index=9"
             >link
           </a>
+         </div>
+          <div class="box-img" > <img src="./yo.jpeg" alt="">
+            <h3>Nombre Autor</h3></div>
+    
+        
+         
+        
         </div>
       </div>
     </div>
@@ -23,11 +32,12 @@
     font-family: var(--fuente-principal);
     align-items: center;
     border-radius: 20px;
-    background: #e0e0e0;
-    box-shadow:
-      20px 20px 60px #bebebe,
-      -20px -20px 20px #ffffff;
-  }
+    background: #d9d9d9;
+margin-bottom: 20px;
+   
+   /*  box-shadow: 5px 5px 70px #bebebe;
+    /*  -5px -5px 5px #ffffff; */ */
+  } 
 
   .container-blog img {
     width: 100%;
@@ -46,16 +56,45 @@
     font-size: 20px;
   }
 
-  .btn-blog {
+  /* .btn-blog {
     padding: 10px 25px;
     justify-content: center;
     background-color: var(--color-primario);
     border-radius: 5px;
-  }
-  .btn-blog a {
+  } */
+  .btn {
+    font-size: 16px;
     color: white;
+    padding: 10px 45px;
+    border-radius: 5px;
+    background-color: var(--color-primario);
   }
+
   .btn-container {
     display: flex;
   }
+
+  .btn-blog {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+  }
+.box-img img{
+ border-radius: 50%;
+ height: 40px;
+ width: 40px;
+ object-fit: cover;
+}
+.box-img{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.box-img h3{
+  font-size: 13px;
+}
 </style>
