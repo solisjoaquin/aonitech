@@ -1,24 +1,23 @@
 ---
-import ThemeToggleButton from './ThemeToggleButton.svelte';
-const { current = '' } = Astro.props;
+import ThemeToggleButton from "./ThemeToggleButton.svelte";
+const { current = "" } = Astro.props;
 ---
 
 <header>
-    <div class="logo">
-      <h1><a href="/">Aonitech</a></h1>
-    </div>
-    
-    <nav class="nav">
-      <a href="/lab">lab</a>
-      <a href="/blog">blog</a>
-      <a href="/video">video</a>
-      <ThemeToggleButton client:load />
-    </nav>
-  </header>
+  <div class="logo">
+    <h1><a href="/">Aonitech</a></h1>
+  </div>
 
-  <style>
+  <nav class="nav">
+    <a href="/lab">lab</a>
+    <a href="/blog">blog</a>
+    <a href="/video">video</a>
+    <ThemeToggleButton client:load />
+  </nav>
+</header>
 
-    header {
+<style>
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,16 +27,17 @@ const { current = '' } = Astro.props;
   }
   .logo h1 a {
     font-family: var(--fuente-principal);
-    color: black;
+    color: var(--color-fuente);
   }
   .nav {
     display: flex;
     gap: 1rem;
+    align-items: center;
   }
 
   .nav a {
-    color: #353535;
+    color: var(--color-fuente);
     font-family: var(--fuente-principal);
     font-weight: 600;
   }
-  </style>
+</style>
