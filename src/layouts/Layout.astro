@@ -4,6 +4,8 @@ interface Props {
 }
 const { title } = Astro.props;
 import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import '../styles/global.css'
 ---
 
 <!doctype html>
@@ -23,17 +25,7 @@ import Footer from "../components/Footer.astro";
     <title>{title}</title>
   </head>
   <body>
-    <header>
-      <div class="logo">
-        <h1><a href="/">Aonitech</a></h1>
-      </div>
-
-      <nav class="nav">
-        <a href="/lab">lab</a>
-        <a href="/blog">blog</a>
-        <a href="/video">video</a>
-      </nav>
-    </header>
+    <Header />
 
     <slot />
 
@@ -41,12 +33,7 @@ import Footer from "../components/Footer.astro";
   </body>
 </html>
 <style is:global>
-  :root {
-    --color-primario: #0075ff;
-    --fuente-principal: "Inter", sans-serif;
-    --color-secundario: #d9d9d9;
-    --color-terciario: #333333;
-  }
+  
 
   * {
     margin: 0;
@@ -54,33 +41,12 @@ import Footer from "../components/Footer.astro";
   }
 
   body {
-    background-color: #fafafa;
+    background-color: var(--background-color);
   }
 
   a {
     text-decoration: none;
   }
 
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 15px 10px;
-  }
-  .logo h1 a {
-    font-family: var(--fuente-principal);
-    color: black;
-  }
-  .nav {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .nav a {
-    color: #353535;
-    font-family: var(--fuente-principal);
-    font-weight: 600;
-  }
+  
 </style>

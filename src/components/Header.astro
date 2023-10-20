@@ -1,0 +1,43 @@
+---
+import ThemeToggleButton from "./ThemeToggleButton.svelte";
+const { current = "" } = Astro.props;
+---
+
+<header>
+  <div class="logo">
+    <h1><a href="/">Aonitech</a></h1>
+  </div>
+
+  <nav class="nav">
+    <a href="/lab">lab</a>
+    <a href="/blog">blog</a>
+    <a href="/video">video</a>
+    <ThemeToggleButton client:load />
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 10px;
+  }
+  .logo h1 a {
+    font-family: var(--fuente-principal);
+    color: var(--color-fuente);
+  }
+  .nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .nav a {
+    color: var(--color-fuente);
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+  }
+</style>
