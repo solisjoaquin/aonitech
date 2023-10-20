@@ -36,10 +36,10 @@ const { lab } = Astro.props;
     align-items: center;
     margin: 20px;
     border-radius: 20px;
-    background: #e0e0e0;
-    box-shadow:
-      20px 20px 60px #bebebe,
-      -20px -20px 60px #ffffff;
+    background: var(--color-card);
+    /*  box-shadow:
+      5px 5px 10px #bebebe98,
+      -2px -2px 20px #ffffff5a; */
   }
   .container-lab:hover {
     transform: scale(1.01);
@@ -47,7 +47,6 @@ const { lab } = Astro.props;
   .box-img {
     padding-top: 20px;
     width: 100%;
-    
   }
   .box-img img {
     height: 200px;
@@ -58,13 +57,14 @@ const { lab } = Astro.props;
   .titulos-lab h1 {
     font-size: 36px;
     padding-bottom: 10px;
+    color: var(--color-fuente);
   }
   .titulos-lab h2 {
     font-size: 20px;
     padding-bottom: 15px;
+    color: var(--color-fuente);
   }
   .btn-lab {
-
     display: flex;
     gap: 20px;
   }
@@ -102,6 +102,5 @@ const { lab } = Astro.props;
       padding-bottom: 180px;
       padding-left: 30px;
     }
-
   }
 </style>
