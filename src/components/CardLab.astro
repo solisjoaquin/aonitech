@@ -16,8 +16,9 @@ const { lab } = Astro.props;
     <h1>{lab.name}</h1>
     <h2>{lab.descripcion}</h2>
     <div class="btn-lab">
-      <a class="btn btn-azul-lab" href={lab.urlDemo}>Ver demo</a>
-      <a class="btn btn-gris-lab" href={lab.urlRepo}>Repo</a>
+      <a class="btn btn-azul-lab" href={lab.urlDemo} target="_blank">Ver demo</a
+      >
+      <a class="btn btn-gris-lab" href={lab.urlRepo} target="_blank">Repo</a>
     </div>
   </div>
   <div class="box-img">
