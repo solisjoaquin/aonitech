@@ -5,7 +5,7 @@ const { current = "" } = Astro.props;
 
 <header>
   <div class="logo">
-    <h1><a href="/">Aonitech</a></h1>
+    <h1 class="logo_text"><a href="/">Aonitech</a></h1>
   </div>
 
   <nav class="nav">
@@ -25,7 +25,7 @@ const { current = "" } = Astro.props;
     margin: 0 auto;
     padding: 15px 10px;
   }
-  .logo h1 a {
+  .logo .logo_text a {
     font-family: var(--fuente-principal);
     color: var(--color-fuente);
   }
