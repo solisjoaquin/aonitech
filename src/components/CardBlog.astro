@@ -1,24 +1,29 @@
+---
+const { post } = Astro.props;
+
+const href = `/blog/${post.file.split('/').pop().split('.').shift()}`;
+---
+
 <div>
   <div class="container-blog">
     <div><img src="/llama.png" alt="" /></div>
     <div class="titulo-blog">
-      <h2>Titulo del post</h2>
-      <p>Descripcion del post</p>
+      <h2><a href={href}>{post.frontmatter.title}</a></h2>
+      <p>{post.frontmatter.description}</p>
+      <span class="post-item-date">— {post.frontmatter.publishDate}</span>
       <div class="btn-container">
         <div class="btn-blog">
           <div>
           <a
             class="btn"
-            href="https://www.youtube.com/watch?v=YSV0bsXb74Q&list=RDGMEMFDHdtbQF5jLxlUZMleBN_wVMy8rBC6GCUjg&index=9"
+            href={ href }
             >link
           </a>
          </div>
           <div class="box-img" > <img src="./yo.jpeg" alt="">
-            <h3>Nombre Autor</h3></div>
-    
-        
-         
-        
+            <h3>{post.frontmatter.autor}</h3>
+          
+          </div>
         </div>
       </div>
     </div>
