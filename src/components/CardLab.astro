@@ -34,7 +34,7 @@ const { lab } = Astro.props;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+
     margin: 20px;
     border-radius: 20px;
     background: var(--color-card);
@@ -48,9 +48,10 @@ const { lab } = Astro.props;
   .box-img {
     padding-top: 20px;
     width: 100%;
+    object-fit: contain;
   }
   .box-img img {
-    height: 200px;
+   
     width: 100%;
     object-fit: cover;
     border-radius: 5px;
