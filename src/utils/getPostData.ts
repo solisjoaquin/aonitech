@@ -1,4 +1,4 @@
-/* import readingTime from "reading-time"; */
+import readingTime from "reading-time";
 
 type Post = {
   title: string;
@@ -9,6 +9,6 @@ type Post = {
 export default function getPostData(post: Post) {
   return {
     slug: post.file.split("/").pop().split(".").shift(),
-    /* readingTime: readingTime(post.rawContent()).text, */
+    readingTime: readingTime(post.rawContent()).text,
   };
 }
